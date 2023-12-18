@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwbrqsr1nayk2"]
+
+[ext_resource type="Script" path="res://scenes/explosion.gd" id="1_serga"]
+
+[sub_resource type="Curve" id="Curve_p155h"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Explosion" type="CPUParticles2D"]
+emitting = false
+amount = 20
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 5.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 90.0
+initial_velocity_max = 110.0
+scale_amount_min = 14.0
+scale_amount_max = 16.0
+scale_amount_curve = SubResource("Curve_p155h")
+color = Color(1, 0.298039, 0.258824, 1)
+script = ExtResource("1_serga")

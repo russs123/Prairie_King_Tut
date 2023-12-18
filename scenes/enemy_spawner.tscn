@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://o7bmrrylrpvk"]
+
+[ext_resource type="Script" path="res://scenes/enemy_spawner.gd" id="1_mc2xi"]
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource("1_mc2xi")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(360, -50)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(405, -50)
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(450, -50)
+
+[node name="Marker2D4" type="Marker2D" parent="."]
+position = Vector2(360, 800)
+
+[node name="Marker2D5" type="Marker2D" parent="."]
+position = Vector2(405, 800)
+
+[node name="Marker2D6" type="Marker2D" parent="."]
+position = Vector2(450, 800)
+
+[node name="Marker2D7" type="Marker2D" parent="."]
+position = Vector2(-50, 350)
+
+[node name="Marker2D8" type="Marker2D" parent="."]
+position = Vector2(-50, 395)
+
+[node name="Marker2D9" type="Marker2D" parent="."]
+position = Vector2(-50, 440)
+
+[node name="Marker2D10" type="Marker2D" parent="."]
+position = Vector2(800, 350)
+
+[node name="Marker2D11" type="Marker2D" parent="."]
+position = Vector2(800, 395)
+
+[node name="Marker2D12" type="Marker2D" parent="."]
+position = Vector2(800, 440)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
